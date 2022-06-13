@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans.xsd 
+  http://www.springframework.org/schema/context/ 
+  http://www.springframework.org/schema/context/spring-context.xsd">
+  <bean id="empdao" class="com.chainsys.springproject.dao.EmployeeDao"
+   init-method="getConnection" destroy-method="close"></bean>
+  <bean id="emp" class="com.chainsys.springproject.dao.Employee"></bean>
+  <bean id="exc" class="com.chainsys.springproject.commanutil.ExceptionManager"></bean>
+  <bean id="log" class="com.chainsys.springproject.commanutil.LogManager"></bean>
+  <bean id="empspring" class="com.chainsys.springproject.view.EmployeeSprings" destroy-method="close"></bean>
+  <bean id="val" class="com.chainsys.springproject.commanutil.Validator"></bean>
+  </beans>
